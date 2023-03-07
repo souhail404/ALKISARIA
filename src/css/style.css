@@ -738,23 +738,33 @@ footer{
     #d-f-products .f-product{
         align-items: center;
     }
+    .wrapper-title{
+        padding: 0 6px;
+        height: 40px;
+    }
+    .wrapper-title-txt{
+        font-size: 22px;
+    }
 }
 @media (max-width:480px) {
     .p-5{
         padding: 0 16px;
     }
     #d-f-products .d-product .img{
-        width: 260px;
-        height: 260px;
+        width: 280px;
+        height: 280px;
         padding: 0;
     }
     #d-f-products .d-product .infos{
         width: 100%;
-        font-size: 16px;
+        font-size: 18px;
         margin: 0;
         padding: 0;
-        padding-inline: 6px;
+        padding-inline: 4px;
         margin-top: 16px;
+    }
+    #d-f-products .d-product .infos .price{
+        font-size: 21px;
     }
     #d-f-products .d-product .infos .products-data div:not(:last-child){
         margin-bottom: 8px; 
@@ -772,7 +782,7 @@ footer{
     #d-f-products .featured-products .infos{
         width: calc(100% - 100px);
         padding-left: 6px;
-        font-size: 16px;
+        font-size: 18px;
     }
     #d-f-products .f-product .img{
         width: 100px;
@@ -780,8 +790,9 @@ footer{
         padding: none;
     }
     #d-f-products .d-product .infos .products-data .buy-btn{
-        height: 34px;
-        font-size: 16px;
+        height: 44px;
+        font-size: 18px;
+        margin-top: 12px;
     }
     #d-f-products .d-product .infos #timer {
         width: 100%;
@@ -794,7 +805,12 @@ footer{
     } 
     #d-f-products .d-product .infos #timer div {
         margin: 0 2px;
-        font-size: 14px;
+        font-size: 16px;
+    }
+    #d-f-products .featured-products .infos .name-txt{
+        display: -webkit-box;
+        -webkit-line-clamp: 1; 
+                line-clamp: 1; 
     }
     /* sos */
     .header-wrapper{
