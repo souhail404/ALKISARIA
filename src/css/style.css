@@ -538,8 +538,8 @@ footer{
     height: 40px;
     display: flex;
     align-items: center;
-    border-bottom: 2px solid var(--soft-brown);
-    color: var(--soft-brown);
+    border-bottom: 2px solid var(--somo);
+    color: var(--somo);
 }
 .wrapper-title-txt{
     font-size: 20px;
@@ -735,6 +735,10 @@ footer{
     #d-f-products .featured-products .infos .price .real-price{
         font-size: 20px;
     }
+    .wrapper-title-txt{
+        font-size: 24px;
+        font-weight: 700;
+    }
 }
 @media (max-width:600px) {
     .p-5{
@@ -785,11 +789,6 @@ footer{
     #d-f-products .content .f-product:nth-child(n + 4){
         display: none;
     }
-    #d-f-products .featured-products .infos{
-        width: calc(100% - 128px);
-        padding-left: 8px;
-        font-size: 20px;
-    }
     #d-f-products .featured-products .infos .name-txt{
         font-weight: 300;
         font-size: 20px;
@@ -802,9 +801,16 @@ footer{
         font-size: 22px;
     }
     #d-f-products .f-product .img{
-        width: 120px;
-        height: 120px;
+        width: 126px;
+        height: 126px;
         padding: none;
+    }
+    #d-f-products .featured-products .infos{
+        width: calc(100% - 132px);
+        padding-left: 6px ;
+    }
+    #d-f-products .featured-products .content{
+        row-gap: 32px;
     }
     #d-f-products .d-product .infos .products-data .buy-btn{
         height: 42px;
@@ -855,7 +861,7 @@ footer{
         padding: 8px;
     }
     #d-f-products .featured-products .infos{
-        width: calc(100% - 100px);
+        width: calc(100% - 106px);
         padding-left: 6px;
         font-size: 18px;
     }
@@ -867,7 +873,7 @@ footer{
     #d-f-products .d-product .infos .products-data .buy-btn{
         height: 44px;
         font-size: 18px;
-        margin-top: 12px;
+        margin-top: 8px;
     }
     #d-f-products .d-product .infos #timer {
         width: 100%;
@@ -886,6 +892,14 @@ footer{
         display: -webkit-box;
         -webkit-line-clamp: 1; 
                 line-clamp: 1; 
+    }
+    #d-f-products .featured-products .infos .price .real-price{
+        font-size: 20px;
+        font-weight: 400;
+    }
+    #d-f-products .featured-products .infos .price .old-price{
+        font-size: 18px;
+        font-weight: 300;
     }
     /* sos */
     .header-wrapper{
