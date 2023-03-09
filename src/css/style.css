@@ -29,7 +29,7 @@ body{
     padding-top: 124px;
     background-color: var(--white);
     min-width: 332px;
-    background-color: #f5f5f5;
+    background-color: #f4f4f4;
 }
 
 .app{
@@ -64,6 +64,7 @@ header {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    display:  none;
 }
 
 .logo-wrapper a{
@@ -124,7 +125,7 @@ nav .navlinks-wrapper ul li a {
 /* HERO SECTION STYLING */
 #hero{
     width: 100%;
-    height: 300px;
+    height: 380px;
     margin-top: 12px;
     /* padding: 0 12px; */
 }
@@ -141,10 +142,11 @@ nav .navlinks-wrapper ul li a {
     height: 100%;
     transition: transform 0.25s ease;
     display: grid;
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 1.4fr 1fr ;
     grid-template-rows: 100%;
     padding: 12px 5%;
 }
+
 .hero-s-wrapper .hero-banner .row{
     width: 100%;
     height: 100%;
@@ -154,18 +156,43 @@ nav .navlinks-wrapper ul li a {
     justify-content: center;
     color: var(--white);
 }
+.hero-banner .row .illustratuion-img{
+    max-height: 320px;
+}
 .hero-banner .row .main-txt{
     text-transform: uppercase;
 }
 .hero-banner .row .main-txt h1{
-    font-size: 34px;
-    text-shadow:-2px 3px var(--somo);
+    font-size: 48px;
+    line-height: 58px;
+    text-shadow:-3px 3px var(--somo);
     margin-bottom: 8px;
+    animation: signshadow 1.2s infinite ease;
+    letter-spacing: 3px;
+}
+@keyframes signshadow {
+    0%{
+        text-shadow:-3px 3px transparent;
+    }
+    16%{
+        text-shadow:-3px 3px #EF6A77;
+    }
+    85%{
+        text-shadow:-3px 3px #EF6A77;
+    }
+    100%{
+        text-shadow:-3px 3px transparent;
+    }
 }
 .hero-banner .row .main-txt h2{
     font-size: 18px;
     letter-spacing: 1px;
+    color: #EF6A77;
 }
+.hero-s-wrapper .hero-banner.hero-banner-2 .row h2{
+    color: #091B1A;
+}
+
 
 
 /* ----------------------------------------------------------- */
@@ -547,8 +574,9 @@ footer{
     color: var(--somo);
 }
 .wrapper-title-txt{
-    font-size: 20px;
+    font-size: 24px;
     text-transform:uppercase;
+    font-weight: 600;
 }
 
 
@@ -686,6 +714,22 @@ footer{
         gap: 16px;
         row-gap: 32px;
     }
+    #hero{
+        width: 100%;
+        height: 320px;
+    }
+    .hero-banner .row .illustratuion-img{
+        max-height: 250px;
+    }
+    .hero-s-wrapper .hero-banner{
+        grid-template-columns: 1.6fr 1fr ;
+        grid-template-rows: 100%;
+        padding: 16px 4%;
+    }
+    .hero-banner .row .main-txt h1{
+        font-size: 40px;
+        line-height: 46px;
+    }
 }
 @media (max-width:768px) {
     .p-5{
@@ -749,6 +793,19 @@ footer{
     .wrapper-title-txt{
         font-size: 24px;
         font-weight: 700;
+    }
+    #hero{
+        height: 300px;
+    }
+    .hero-banner .row .illustratuion-img{
+        max-height: 210px;
+    }
+    .hero-banner .row .main-txt h1{
+        font-size: 36px;
+        line-height: 44px;
+    }
+    .hero-banner .row .main-txt h2{
+        font-size: 16px;
     }
 }
 @media (max-width:600px) {
@@ -868,6 +925,40 @@ footer{
         border: 1px solid var(--black);
         transition: all 0.3s ease;
     }
+
+
+
+
+
+    #hero{
+        height: 600px;
+        margin-top: 12px;
+    }
+    .hero-s-wrapper .hero-banner{
+        grid-template-columns:1fr ;
+        grid-template-rows: 1fr 1.6fr;
+        padding: 16px 24px;
+        row-gap: 16px;
+    }
+    .hero-s-wrapper .hero-banner .row{
+        align-items:flex-start;
+    }
+    .hero-s-wrapper .hero-banner .row.img{
+        align-items:flex-end;
+        padding-right: 10%;
+    }
+    .hero-banner .row .illustratuion-img{
+        max-height: 320px;
+    }
+    .hero-banner .row .main-txt h1{
+        font-size: 48px;
+        line-height: 58px;
+        margin-bottom: 16px;
+    }
+    .hero-banner .row .main-txt h2{
+        font-size: 20px;
+    }
+    
 }
 @media (max-width:480px) {
     .p-5{
@@ -955,10 +1046,25 @@ footer{
         padding: 8px;
         padding-block: 16px;
     }
-    /* sos */
-    .header-wrapper{
-        display: none;
+    #hero{
+        height: 550px;
+        margin-top: 12px;
     }
+    .hero-banner .row .illustratuion-img{
+        max-height: 300px;
+    }
+    .hero-banner .row .main-txt h1{
+        font-size: 36px;
+        line-height: 44px;
+        margin-bottom: 16px;
+    }
+    .hero-banner .row .main-txt h2{
+        font-size: 18px;
+    }
+    /* sos */
+    /* .header-wrapper{
+        display: none;
+    } */
 }
 @media (max-width:400px) {
     .product-card {
@@ -967,6 +1073,20 @@ footer{
         margin: 0 auto;
         padding: 8px;
         padding-block: 16px;
+    }
+    #hero{
+        height: 520px;
+    }
+    .hero-banner .row .illustratuion-img{
+        max-height: 250px;
+    }
+    .hero-banner .row .main-txt h1{
+        font-size: 32px;
+        line-height: 38px;
+        margin-bottom: 16px;
+    }
+    .hero-banner .row .main-txt h2{
+        font-size: 18px;
     }
 }
 @media (max-width:350px) {
