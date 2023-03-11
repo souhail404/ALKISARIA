@@ -15,11 +15,7 @@ function moveLeft(){
 };
 
 
-// function nextBanner() {
-//   banner[currentBannerIndex].style.display = 'none';
-//   currentBannerIndex = (currentBannerIndex + 1) % banner.length;
-//   banner[currentBannerIndex].style.display = 'block';
-// }
+
 // Set the date 2 days from now
 const endDate = new Date(Date.now() + 2 * 24 * 60 * 60 * 1000);
 
@@ -40,12 +36,5 @@ setInterval(() => {
   document.getElementById("minutes").textContent = `${minutes} Min`;
   document.getElementById("seconds").textContent = `${seconds} Sec`;
 }, 1000);
-
-
-
-
-
-
-
 
 
