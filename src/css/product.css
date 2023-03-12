@@ -136,11 +136,10 @@
 
 /* product infos */
 #product-data-page .row.product-infos{
-  height: 150vh;
+  height: auto;
 }
 #product-data-page .row.product-infos .info-part{
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -162,38 +161,38 @@
   font-weight: 400;
   text-transform:capitalize;
 }
-#product-data-page .row.product-infos .pi--rating{
+#product-data-page .row.product-infos .info-part .pi--rating{
   display: flex;
   align-items: center;
 }
 
 
-#product-data-page .row.product-infos .pi--rating span{
+#product-data-page .row.product-infos .info-part .pi--rating span{
   height: 18px;
   display: flex;
   font-size: 14px;
 }
-#product-data-page .row.product-infos .pi--rating span.staring-number{
+#product-data-page .row.product-infos .info-part .pi--rating span.staring-number{
   margin-left: 4px;
   color: var(--black08);
 }
-#product-data-page .row.product-infos .pi--rating span:not(:last-child){
+#product-data-page .row.product-infos .info-part .pi--rating span:not(:last-child){
   margin-right: 4px;
 }
-#product-data-page .row.product-infos .pi--rating img{
+#product-data-page .row.product-infos .info-part .pi--rating img{
   width: 18px;
   height: 18px;
   max-height: 18px;
   max-width: 18px;
   filter: invert(86%) sepia(36%) saturate(3046%) hue-rotate(357deg) brightness(104%) contrast(104%);
 }
-#product-data-page .row.product-infos .pi--price{
+#product-data-page .row.product-infos .info-part .pi--price{
   font-size: 26px;
   font-weight: 600;
   display: flex;
   align-items: baseline;
 }
-#product-data-page .row.product-infos .pi--price .old-price{
+#product-data-page .row.product-infos .info-part .pi--price .old-price{
   font-size: 22px;
   font-weight: 500;
   text-decoration: line-through var(--somo);	
@@ -206,7 +205,7 @@
   background-color: var(--black02);
   margin-bottom: 32px;
 }
-#product-data-page .row.product-infos .pi--cta{
+#product-data-page .row.product-infos .info-part .pi--cta{
   width: 100%;
   height: auto;
   display: flex;
@@ -214,25 +213,25 @@
   align-items: flex-start;
   margin-top: 24px;
 }
-#product-data-page .row.product-infos .pi--cta .col{
+#product-data-page .row.product-infos .info-part .pi--cta .col{
   width: 100%;
   height: 44px;
   display: flex;
   align-items: center;
 }
-#product-data-page .row.product-infos .pi--cta .col1{
+#product-data-page .row.product-infos .info-part .pi--cta .col1{
   display: grid;
   grid-template-columns: 1.1fr 0.1fr;
   column-gap: 8px;
 }
-#product-data-page .row.product-infos .pi--cta .col:not(:last-child){
+#product-data-page .row.product-infos .info-part .pi--cta .col:not(:last-child){
   margin-bottom: 8px;
 }
-#product-data-page .row.product-infos .pi--cta .col .cta-btn{
+#product-data-page .row.product-infos .info-part .pi--cta .col .cta-btn{
   height: 100%;
   width: 100%;
 }
-#product-data-page .row.product-infos .pi--cta .col .buynow{
+#product-data-page .row.product-infos .info-part .pi--cta .col .buynow{
   width: 100%;
   display: flex;
   align-items: center;
@@ -243,7 +242,7 @@
   color:var(--white);
   transition: all 0.3s ease;
 }
-#product-data-page .row.product-infos .pi--cta .col .addtc{
+#product-data-page .row.product-infos .info-part .pi--cta .col .addtc{
   width: 100%;
   display: flex;
   align-items: center;
@@ -253,12 +252,12 @@
   color:var(--black);
   transition: all 0.3s ease;
 }
-#product-data-page .row.product-infos .pi--cta .col .addtc:hover , #product-data-page .row.product-infos .pi--cta .col .buynow:hover{
+#product-data-page .row.product-infos .info-part .pi--cta .col .addtc:hover , #product-data-page .row.product-infos .pi--cta .col .buynow:hover{
   border: 1px solid var(--somo);
   background-color: var(--somo);
   color:var(--white);
 }
-#product-data-page .row.product-infos .pi--cta .fav{
+#product-data-page .row.product-infos .info-part .pi--cta .fav{
   height: 100%;
   width: 100%;
   display: flex;
@@ -266,12 +265,48 @@
   justify-content: center;
   border: 1px solid var(--black);
 }
-#product-data-page .row.product-infos .pi--cta .fav img{
+#product-data-page .row.product-infos .info-part .pi--cta .fav img{
   width: 20px;
 }
-
-
-
+/* description part */
+#product-data-page .row.product-infos .description-part{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 32px;
+}
+#product-data-page .row.product-infos .description-part .header-title{
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid var(--somo);
+}
+#product-data-page .row.product-infos .description-part .header-title-txt{
+  color: var(--somo);
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+#product-data-page .row.product-infos .description-part .description-content-wrapper{
+  padding-top: 16px;
+  font-size: 18px;
+  width: 100%;
+}
+#product-data-page .row.product-infos .description-part .description-content-wrapper .content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#product-data-page .row.product-infos .description-part .description-content-wrapper .content img{
+  max-width: 70%;
+}
+#product-data-page .row.product-infos .description-part .description-content-wrapper .content > *:not(:last-child){
+  margin-bottom: 16px;
+}
 
 
 
@@ -340,6 +375,10 @@
     margin-left:auto;
     margin-right: auto;
   }
+  #product-data-page .row.product-infos .description-part{
+    width: 85%;
+    margin-inline: auto;
+  }
 }
 @media (max-width:600px){
   #product-data-page .container .content{
@@ -384,6 +423,9 @@
   #product-data-page .row.product-infos .info-part{
     width: 90%;
   }
+  #product-data-page .row.product-infos .description-part{
+    width: 90%;
+  }
 }
 @media (max-width:520px){
   #product-data-page .row .pp--slider-wrapper{
@@ -392,12 +434,18 @@
   #product-data-page .row.product-infos .info-part{
     width: 95%;
   }
+  #product-data-page .row.product-infos .description-part{
+    width: 95%;
+  }
 }
 @media (max-width:480px){
   #product-data-page .row .pp--slider-wrapper{
     width: 100%;
   }
   #product-data-page .row.product-infos .info-part{
+    width: 100%;
+  }
+  #product-data-page .row.product-infos .description-part{
     width: 100%;
   }
   #product-data-page .row .pp--slider-wrapper .slider-imgs{
