@@ -295,22 +295,89 @@
   font-size: 18px;
   width: 100%;
 }
-#product-data-page .row.product-infos .description-part .description-content-wrapper .content{
+#product-data-page .row.product-infos .description-part .description-content-wrapper .d-content{
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#product-data-page .row.product-infos .description-part .description-content-wrapper .content img{
+#product-data-page .row.product-infos .description-part .description-content-wrapper .d-content img{
   max-width: 70%;
 }
-#product-data-page .row.product-infos .description-part .description-content-wrapper .content > *:not(:last-child){
+#product-data-page .row.product-infos .description-part .description-content-wrapper .d-content > *:not(:last-child){
   margin-bottom: 16px;
 }
 
 
 
+/* ------------------------------------------------- */
+/* product-testimonials styling */
+#product-testimonials{
+  width: 100%;
+  margin-top: 64px ;
+}
+#product-testimonials .container{
+  width: 100%;
+}
+#product-testimonials .container .header-title{
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid var(--somo);
+}
+#product-testimonials .container .header-title-txt{
+  color: var(--somo);
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+#product-testimonials .container .content{
+  width: 100%;
+  padding-top: 16px;
+}
+#product-testimonials .container .content .testimonials-wrapper{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3 , 1fr);
+  row-gap: 16px;
+  column-gap: 16px;
+}
+#product-testimonials .container .content .testimonials-wrapper .testimonial-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  background-color: var(--white);
+  border-radius: 6px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+}
 
+#product-testimonials .container .content .testimonials-wrapper .testimonial-image {
+  margin-bottom: 20px;
+}
+
+#product-testimonials .container .content .testimonials-wrapper .testimonial-image img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+#product-testimonials .container .content .testimonials-wrapper .testimonial-content {
+  text-align: center;
+}
+
+#product-testimonials .container .content .testimonials-wrapper .testimonial-text {
+  font-style: italic;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+#product-testimonials .container .content .testimonials-wrapper .testimonial-name {
+  font-weight: bold;
+  font-size: 14px;
+}
 
 
 
@@ -379,6 +446,21 @@
     width: 85%;
     margin-inline: auto;
   }
+  #product-testimonials .container .content .testimonials-wrapper{
+    display: grid;
+    grid-template-columns: repeat(1 , 1fr);
+  }
+  #product-testimonials .container .header-title{
+    width: 85%;
+    margin-inline: auto;
+  }
+  #product-testimonials .container .content{
+    width: 85%;
+    margin-inline: auto;  
+  }
+  #product-testimonials{
+    margin-top: 32px ;
+  }
 }
 @media (max-width:600px){
   #product-data-page .container .content{
@@ -426,6 +508,12 @@
   #product-data-page .row.product-infos .description-part{
     width: 90%;
   }
+  #product-testimonials .container .header-title{
+    width: 90%;
+  }
+  #product-testimonials .container .content{
+    width: 90%;
+  }
 }
 @media (max-width:520px){
   #product-data-page .row .pp--slider-wrapper{
@@ -437,12 +525,24 @@
   #product-data-page .row.product-infos .description-part{
     width: 95%;
   }
+  #product-testimonials .container .header-title{
+    width: 95%;
+  }
+  #product-testimonials .container .content{
+    width: 95%;
+  }
 }
 @media (max-width:480px){
   #product-data-page .row .pp--slider-wrapper{
     width: 100%;
   }
   #product-data-page .row.product-infos .info-part{
+    width: 100%;
+  }
+  #product-testimonials .container .header-title{
+    width: 100%;
+  }
+  #product-testimonials .container .content{
     width: 100%;
   }
   #product-data-page .row.product-infos .description-part{

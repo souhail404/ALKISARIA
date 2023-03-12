@@ -519,7 +519,7 @@ footer{
     height: auto;
     min-height: 120px;
     background-color: #333;
-    margin-top: 32px;
+    margin-top: 64px;
 }
 .footer-container{
     display: flex;
