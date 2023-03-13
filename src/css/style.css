@@ -23,6 +23,9 @@
     --somob1:#e96c46;
     --white:#fffbf9;
 }
+img{
+    max-width: 100%;
+}
 a{
     color: var(--black);
 }
@@ -41,6 +44,7 @@ body{
     height: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
 }
 
 
@@ -57,7 +61,8 @@ header {
     right: 0;
     left: 0;
     z-index: 9999;
-    box-shadow: 0 0 10px 2px var(--soft-brown02);
+    box-shadow: -0px 0px 5px var(--black02);
+    /* box-shadow: 0 0 10px 2px var(--soft-brown02); */
 }
 
 .header-wrapper{
@@ -112,17 +117,28 @@ nav .navlinks-wrapper ul li a {
     display: flex;
     align-items: center; 
 }
-.header-wrapper .cart-login-wrapper a{
+.header-wrapper .cart-login-wrapper .h--icons{
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
-.header-wrapper .cart-login-wrapper a:not(:last-child){
+.header-wrapper .cart-login-wrapper .h--icons:not(:last-child){
     margin-right: 24px;
 }
-.header-wrapper .cart-login-wrapper a img{
-    height: 20  px;
+.header-wrapper .cart-login-wrapper .h--icons img{
+    height: 20px;
 }
-  
+.header-wrapper .cart-login-wrapper .h--icons .cancel-icon{
+    height: 22px;
+    display: none;
+}
+.header-wrapper .cart-login-wrapper .h--icons-dd.show img{
+    display: none;
+}
+.header-wrapper .cart-login-wrapper .h--icons-dd.show .cancel-icon{
+    display: block;
+}
+
 /* ----------------------------------------------------------- */
 /* ----------------------------------------------------------- */
 /* ----------------------------------------------------------- */
@@ -608,6 +624,93 @@ footer{
 }
 
 
+
+
+
+
+/* ----------------------------------------------------------- */
+/* ----------------------------------------------------------- */
+/* ----------------------------------------------------------- */
+/* Shopping carrt styling */
+#shopping-cart{
+    width: 350px;
+    max-height: 100vh;
+    position: fixed;
+    overflow-y: scroll;
+    top: 0;
+    z-index: 90;
+    background-color: var(--white);
+    box-shadow: -0px 0px 5px var(--black02);
+    display: none;
+}
+#shopping-cart.show{
+    display: block;
+}
+#shopping-cart::-webkit-scrollbar {
+    width: 10px;
+}
+#shopping-cart::-webkit-scrollbar-track {
+    background: var(--white); 
+}
+#shopping-cart::-webkit-scrollbar-thumb {
+    background: var(--black02); 
+}
+#shopping-cart::-webkit-scrollbar-thumb:hover {
+    background: var(--black08); 
+}
+#shopping-cart .container{
+    width: 100%;
+    height: 100%;
+    padding: 32px 16px;
+    padding-top: 144px;
+}
+#shopping-cart .container .empty-cart{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#shopping-cart .container .empty-cart div:not(:last-child){
+    margin-bottom: 16px;
+}
+#shopping-cart .container .empty-cart .img{
+    width: 100%;
+    opacity: 0.4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#shopping-cart .container .empty-cart .img img{
+    width: 30%;
+}
+#shopping-cart .container .empty-cart .txt{
+    width: 100%;
+    opacity: 0.5;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+}
+#shopping-cart .container .empty-cart .txt *:not(:last-child){
+    margin-bottom: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ----------------------------------------------------------- */
 /* ----------------------------------------------------------- */
 /* ----------------------------------------------------------- */
@@ -820,6 +923,10 @@ footer{
     .hero-banner .row .main-txt h1{
         font-size: 40px;
         line-height: 46px;
+    }
+    #shopping-cart{
+        width: 320px;
+        max-height: 100vh;
     }
 }
 @media (max-width:768px) {
@@ -1069,6 +1176,14 @@ footer{
     .logo-wrapper img {
         height: 44px;
     }
+
+    #shopping-cart{
+        width: 100%;
+        max-height: 100vh;
+    }
+    #shopping-cart .container .empty-cart .img img{
+        width: 10%;
+    }
 }
 @media (max-width:480px) {
     .p-5{
@@ -1178,6 +1293,9 @@ footer{
     /* .header-wrapper{
         display: none;
     } */
+    #shopping-cart .container .empty-cart .img img{
+        width: 20%;
+    }
 }
 @media (max-width:400px) {
     .product-card {

@@ -12,8 +12,25 @@
 <body>
 
   <div class="app" id="app">
+
+    <div class="shopping-cart dd-menus" id="shopping-cart">
+      <div class="container">
+          <div class="empty-cart">
+              <div class="img">
+                <img src="src/media/images/icons/shopping-cart-empty.png" alt="">
+              </div>
+              <div class="txt">
+                <p>Your shopping cart is empty.</p>
+                <p>Browse our categories and discover our best deals!</p>
+              </div>
+          </div>
+          <div class="full-cart">
+
+          </div>
+      </div>
+    </div>
       
-    <div class="main">
+    <div class="main app-main">
             <!-- Header  -->
             <header>
                 <div class="header-wrapper p-5">
@@ -38,9 +55,8 @@
                     </nav>
                     <!-- card & login -->
                     <div class="cart-login-wrapper">
-                        <a href=""><img src="src/media/images/icons/person.png" alt=""></a>
-                        <a href=""><img src="src/media/images/icons/shopping cart.png" alt=""></a>
-                        
+                        <span class="h--icons client-account-icon" id="h--ca" ><img src="src/media/images/icons/person.png" alt=""></span>
+                        <span class="h--icons h--icons-dd shopping-cart-icon" id="h--sci"><img src="src/media/images/icons/shopping cart.png" alt=""><img class="cancel-icon" src="src/media/images/icons/x.svg" alt=""></span>
                     </div>
                 </div>
               

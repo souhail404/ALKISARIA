@@ -1,3 +1,4 @@
+// auto sliding banners
 const banners = document.querySelectorAll('.hero-banner');
 const timeInterval  = 10000;
 setTimeout(moveRight , timeInterval)
@@ -38,3 +39,20 @@ setInterval(() => {
 }, 1000);
 
 
+
+// shopping cart
+const shoppingCart = document.querySelector('#shopping-cart');
+const mainSection = document.querySelector('.app-main');
+const headerShoppingCartIcon = document.querySelector('#h--sci');
+const headerIcons = document.querySelectorAll('.h--icons');
+const dropDownMenus = document.querySelectorAll('.dd-menus');
+
+shoppingCart.style.right = `${mainSection.getBoundingClientRect().left}px`;
+window.addEventListener('resize' , ()=>{shoppingCart.style.right = `${mainSection.getBoundingClientRect().left}px`;})
+
+
+
+headerShoppingCartIcon.addEventListener('click' , ()=>{
+    shoppingCart.classList.toggle('show');
+    headerShoppingCartIcon.classList.toggle('show');
+})
